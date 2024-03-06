@@ -23,9 +23,7 @@ public class MyStack<E> extends ArrayList<E> {
             throw new IllegalStateException("Stack is empty");
         }
 
-        E e = get(size() - 1);
-        remove(size() -1 );
-        return e;
+        return delegate.remove(delegate.size() - 1);
     }
 
 
