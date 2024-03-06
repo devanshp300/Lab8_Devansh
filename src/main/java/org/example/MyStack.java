@@ -28,12 +28,7 @@ public class MyStack<E> extends ArrayList<E> {
         return e;
     }
 
-    /*public Object pop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
-        return delegate.remove(delegate.size() - 1);
-    }*/
+
 
     public boolean isEmpty() {
         return delegate.isEmpty();
@@ -42,5 +37,7 @@ public class MyStack<E> extends ArrayList<E> {
     public int size() {
         return delegate.size();
     }
+
+
 
 }
