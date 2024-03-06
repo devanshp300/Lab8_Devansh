@@ -1,28 +1,20 @@
 package org.example;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
-public class AppTest 
-    extends TestCase
+public class AppTest
 {
 
-    public AppTest( String testName )
-    {
-        super( testName );
+    @Test
+    void testPushAndPop() {
+        MyStack stack = new MyStack();
+        stack.push(1);
+        stack.push(2);
     }
 
-
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }

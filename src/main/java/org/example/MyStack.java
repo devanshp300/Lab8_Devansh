@@ -13,7 +13,8 @@ public class MyStack<E> extends ArrayList<E> {
 
 
     public void push(E e) {
-        add(e);
+
+        delegate.add(e);
     }
 
     public E pop() {
