@@ -24,4 +24,12 @@ public class MyStack<E> extends ArrayList<E> {
         return e;
     }
 
+    public boolean isEmpty() {
+        return delegate.isEmpty();
+    }
+
+    public int size() {
+        return delegate.size();
+    }
+
 }
