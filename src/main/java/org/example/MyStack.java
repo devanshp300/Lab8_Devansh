@@ -8,7 +8,7 @@ public class MyStack<E> extends ArrayList<E> {
     private ArrayList<E> delegate;
 
     public MyStack(){
-        this.delegate = this;
+        this.delegate = new ArrayList<>();
     }
 
 
@@ -18,11 +18,22 @@ public class MyStack<E> extends ArrayList<E> {
     }
 
     public E pop() {
-        if (isEmpty()) throw new EmptyStackException();
+
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+
         E e = get(size() - 1);
         remove(size() -1 );
         return e;
     }
+
+    /*public Object pop() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return delegate.remove(delegate.size() - 1);
+    }*/
 
     public boolean isEmpty() {
         return delegate.isEmpty();
